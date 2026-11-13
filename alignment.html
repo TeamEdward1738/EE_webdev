@@ -28,10 +28,14 @@
                 justify-content:center;
                 align-items:center;
             }
+            #cat{
+                width:250px;
+            }
         </style>
     </head>
     <body>
         <h1>Alignment notes</h1>
+        <img  onmouseout = changeImage() src = "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/960px-Cat_November_2010-1a.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="cat" id="cat">
         <div id="box-wrapper">
             <div id="box" onmouseover="dissapear()" onmouseout="appear()">
                 <p>Box 1</p>
@@ -66,6 +70,15 @@
         <button id="showMore" onclick="show">Show More</button>
         <script>
         //makes the webpage interactive
+        let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThQIMmATyNUPKvPRnqqMvSLc_dG0tWW5p5qXAzq-WFAw&s=10,https://humaneanimalrescue.org/wp-content/uploads/2019/08/community-cats-copy.jpg,https://upload.wikimedia.org/wikipedia/commons/9/9a/Cat_07464_kalamis_safinaz.jpg?utm_source=en.wikiquote.org&utm_campaign=index&utm_content=original, https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/960px-Cat_November_2010-1a.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"]
+        let current = 0
+        function changeImage(){
+            current += 1
+            if (current > 3)
+                
+            document.getElementById("cat").src = images[current]
+        }
+        
         function color(){
             let newColor =document.getElementById("colorPicker").value
             document.getElementById("box").style.backgroundColor = newColor
