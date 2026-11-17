@@ -4,7 +4,7 @@
         <title>How to Become a Basic Twihard </title>
               <meta charset="Utf-8"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Cherish&family=Explora&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Explora&family=Italianno&display=swap" rel="stylesheet">
               
         <style>
             body{
@@ -45,19 +45,18 @@
                 margin-left: 50px;
                 color:rgb(113, 4, 4);
             }
-            body{font-family: "Ballet", cursive;
-          font-optical-sizing: auto;
-          font-weight: 400;
-          font-style: normal;
+            body{ font-family: "Italianno", cursive;
+                  font-weight: 400;
+                  font-style: normal;
+                  font-size:20px;
         }
 
         </style>
     </head>
     <body>
-        <img  onmouseout = changeImage() src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10" alt="Charlie Swan" id="Charlie Swan">
         <h1>How to Become a Basic Twihard </h1>
         <h1>Warning: this webpage is to give you the basic plots of all twilight saga movies</h1>
-        <img  onmouseout = "changeImage()" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10" alt="Charlie Swan" id="CharlieSwan">
+        <img  onmouseout = "changeImage()" src = "https://encrypted-tbn0.gstatic.com/image q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10" alt="Charlie Swan" id="CharlieSwan">
         <h2>Index </h2>
         <ul>
            <li>Part 1: Plot of the first movie(Twilight)</li>
@@ -168,6 +167,18 @@
            <li>C</li>  
            <li>C</li> 
         </ol>
-        <button>Click me</button>
+        <button>hide trivia answers</button>
+        <script>
+            let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrtbhTsEgFDwejsVsA6_nepmzvuEYdBNCOewLOzcb10Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7VG5vO84LVhVgC4rm8klyJMDCZXIsF3c_RIx5KJHUw&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMWrxZ4TGl-VgtrPrw_FyHgY2NYMADtE0Tj7SqgCoYxA&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnJwI3MFuua20x5W3j6BO7AFVyB1GYT5Ydv2sK5T6jFw&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgMK_hV_ByXjXcJNiplhWFzH1notr7QAXzSJDppuLgSQ&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhlY22KZphzrAgdq5JPBI34WJnFLX8M4NAJ9oPBDwT2w&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNlA8u6uXrtSaBq6VGZnVGnZMrrcioqRS0-cApUPV1-Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIi-2LQZcgi95f2gaxemFpI4k1PYuVXPP_ZyxrsWZiA&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLISwL1nU25Nz9feZ4Bv1yQMQNM8ONYN9mshzohFlbog&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUTypj9BeWjmgdPImCMjF61Ro9JY34sOAPtwM3EHPDw&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOvnaSrmOJLyY71jTj234bxTL0QnxxOhjFsvLsSJpZ8A&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10"]
+        let current = 0
+        function changeImage(){
+            
+            current += 1
+            if (current > 11){
+                current = 0
+        }
+        document.getElementById("CharliSwan").src = images[current]
+    }
+        </script>
     </body>
 </html>
