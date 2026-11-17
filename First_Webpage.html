@@ -46,17 +46,20 @@
                 color:rgb(113, 4, 4);
             }
             body{ font-family: "Italianno", cursive;
-                  font-weight: 400;
+                  font-weight: 500;
                   font-style: normal;
-                  font-size:20px;
-        }
+                  font-size:25px;
+            }
+            #triviaanswers{
+                display:none;
+            }
 
         </style>
     </head>
     <body>
         <h1>How to Become a Basic Twihard </h1>
         <h1>Warning: this webpage is to give you the basic plots of all twilight saga movies</h1>
-        <img  onmouseout = "changeImage()" src = "https://encrypted-tbn0.gstatic.com/image q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10" alt="Charlie Swan" id="CharlieSwan">
+        <img  onmouseout="changeImage()" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10" alt="Charlie Swan" id="CharlieSwan">
         <h2>Index </h2>
         <ul>
            <li>Part 1: Plot of the first movie(Twilight)</li>
@@ -154,6 +157,8 @@
          <li>Bella returns to being human</li>
     </ol>
         <h2>Part 7: Answer Key to Trivia</h2>
+        <div id = "triviaanswers">
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pNVd5wqfUKZPItFsuP11Qbp4p2_GxHW2ehsC5bzMRA&s=10" alt = "Questionmark">    <ol>
         <ol>
            <li>B</li> 
            <li>C</li>  
@@ -167,18 +172,28 @@
            <li>C</li>  
            <li>C</li> 
         </ol>
-        <button>hide trivia answers</button>
+        </div>
+        <button  id = "Banana"onClick = "show()">Show Trivia Answers</button>
         <script>
             let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrtbhTsEgFDwejsVsA6_nepmzvuEYdBNCOewLOzcb10Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7VG5vO84LVhVgC4rm8klyJMDCZXIsF3c_RIx5KJHUw&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMWrxZ4TGl-VgtrPrw_FyHgY2NYMADtE0Tj7SqgCoYxA&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnJwI3MFuua20x5W3j6BO7AFVyB1GYT5Ydv2sK5T6jFw&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgMK_hV_ByXjXcJNiplhWFzH1notr7QAXzSJDppuLgSQ&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhlY22KZphzrAgdq5JPBI34WJnFLX8M4NAJ9oPBDwT2w&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNlA8u6uXrtSaBq6VGZnVGnZMrrcioqRS0-cApUPV1-Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIi-2LQZcgi95f2gaxemFpI4k1PYuVXPP_ZyxrsWZiA&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLISwL1nU25Nz9feZ4Bv1yQMQNM8ONYN9mshzohFlbog&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUTypj9BeWjmgdPImCMjF61Ro9JY34sOAPtwM3EHPDw&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOvnaSrmOJLyY71jTj234bxTL0QnxxOhjFsvLsSJpZ8A&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RRSOz_ibIFipyyEBEXFed0NAVP-HZIWI9ms8FsY36A&s=10"]
         let current = 0
         function changeImage(){
-            
             current += 1
             if (current > 11){
                 current = 0
         }
-        document.getElementById("CharliSwan").src = images[current]
+        document.getElementById("CharlieSwan").src = images[current]
     }
+     function show(){
+           let element = document.getElementById("triviaanswers") 
+           if(element.style.display == "block"){
+            element.style.display = "none"
+            document.getElementById("Banana").innerHTML = "Show Trivia Answers"
+           }else{
+            element.style.display = "block"
+            document.getElementById("Banana").innerHTML = "Hide Trivia Answers"
+           }
+        }
         </script>
     </body>
 </html>
